@@ -4,13 +4,18 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-const data = {
-  name: "Chaitany",
-  age: 22,
-  city: "pune",
-  edu: "BE EnTC",
-  college: "SKNCOE",
-};
+const data = [
+  {
+    name: "Chaitany",
+    age: 22,
+    city: "pune",
+  },
+  {
+    name: "Ram",
+    age: 22,
+    city: "pune",
+  },
+];
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
