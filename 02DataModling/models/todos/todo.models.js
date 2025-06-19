@@ -14,6 +14,12 @@ const todoSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
+    subTodos: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "SubTodo",
+      },
+    ], //Array of subTodos
   },
   { timestamps: true }
 );
