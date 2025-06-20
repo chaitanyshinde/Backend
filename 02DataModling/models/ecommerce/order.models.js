@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema({});
+const orderSchema = mongoose.Schema({}, { timestamps: true });
 
-
-const User = mongoose.model("User", userSchema);
+const Order = mongoose.model("Order", orderSchema);

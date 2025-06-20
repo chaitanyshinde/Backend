@@ -1,6 +1,13 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema({});
+const categorySchema = mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
 
-
-const User = mongoose.model("User", userSchema);
+const Category = mongoose.model("Category", categorySchema);
