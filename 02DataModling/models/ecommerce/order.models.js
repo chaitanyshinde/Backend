@@ -13,16 +13,25 @@ const orderItemSchema = mongoose.Schema({
 
 const orderSchema = mongoose.Schema(
   {
-    orderPrice: {
-      type: Number,
-      required: true,
-    },
     customer: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
+    orderPrice: {
+      type: Number,
+      required: true,
+    },
     orderItems: {
       type: [orderItemSchema],
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    status: {
+      type: String,
+      enum: ["PENDING", "CANCELED", "DELIVERED"],
+      default: "PENDING",
     },
   },
 
