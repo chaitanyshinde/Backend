@@ -36,7 +36,7 @@ function App() {
       {jokes.map((joke, index) => (
         <div key={joke.id}>
           <p>
-            {joke.id} {". "}
+            {joke.name} {": "}
             {joke.content}
           </p>
         </div>
